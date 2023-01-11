@@ -1,0 +1,29 @@
+version: '3.10'
+services:
+
+  frontend:
+    image: streamlit
+    build: /streamlit/.
+    depends_on:
+      - backend
+    environment:
+      - API_IP=172.18.0.3
+      - API_PORT=8000
+    networks:
+      CatvDogAppNet:
+        ipv4_address: 172.18.0.2
+
+  backend:
+    image: fastapi
+    build: /fastapi/.
+    networks:
+      CatvDogAppNet:
+        ipv4_address: 172.18.0.3
+    environment:
+      - API_IP=172.18.0.3
+      - API_PORT=8000
+
+networks:
+  CatvDogAppNet:
+    driver: bridge
+    external: true
