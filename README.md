@@ -1,15 +1,15 @@
 # transfer_learning_Cat_vs_Dog
 
 ## Description
-Simple project for classification Cat and Dog images using transfer learning based on [MobileNet v2](https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4) pretrained NN fine-tuned by [kaggle dataset](https://www.kaggle.com/competitions/dogs-vs-cats/overview) __(4000 images)__
+Simple project for the classification of Cat and Dog images using transfer learning based on [MobileNet v2](https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4) pretrained NN fine-tuned by [Kaggle dataset](https://www.kaggle.com/competitions/dogs-vs-cats/overview) __(4000 images)__
 
 ## Directory tree
 ![dir_tree](https://github.com/MustaphaDouch/transfer_learning_Cat-vs-Dog/blob/main/github_readme/dir_tree.png)
 
-#### _1. Fastapi_
+#### _1. fastapi_
   Create small API to call _model.py_ where our saved trained model _transfer_learning_dog_vs_cat.h5_ was loaded
 
-#### _2. Streamlit_
+#### _2. streamlit_
   Create light UI to interacte with our API
 
 #### _3. docker-compose.yaml_
