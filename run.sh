@@ -1,5 +1,7 @@
 #! /bin/bash
 
+#Note
+echo "NOTE : this my have some issues running in other env (test env : zshell) "
 #set variables
 frontend_image='streamlit'
 backend_image='fastapi'
@@ -10,8 +12,8 @@ backend_container='FastApi'
 # docker image rm -f $backend_image
 
 #remove container to prevent conflict
-docker container -f $frontend_container
-docker container -f $backend_container
+docker container rm -f $frontend_container
+docker container rm -f $backend_container
 
 #build images
 cd streamlit
